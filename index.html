@@ -19,8 +19,143 @@
     <title>Weather Dashboard</title>
   </head>
   <body>
-    <main></main>
+    <main>
+      <nav class="navbar navbar-dark bg-info justify-content-center">
+        <span class="navbar-brand"><h1>Weather Dashboard</h1></span>
+      </nav>
 
+      <div class="container-fluid">
+        <div class="row ml-1">
+          <div class="col-3">
+            <h3 class="mt-2">Search for a City:</h3>
+
+            <div class="input-group mr-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="City Name"
+                id="userCity"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-info" type="button" id="searchBtn">
+                  Search
+                </button>
+              </div>
+            </div>
+
+            <br />
+
+            <!-- Dynamic Start its the history-->
+            <button
+              type="button"
+              class="btn btn-secondary btn-lg btn-block search-history"
+            >
+              City 1
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-secondary btn-lg btn-block search-history"
+            >
+              City 2
+            </button>
+          </div>
+
+          <!-- Dynamic End after 5 cities-->
+
+          <div class="col-9">
+            <!--Current Date-->
+            <div class="border border-dark current-date mt-2">
+              <h3>Atlanta (3/30/2021)</h3>
+              <!-- Image after date-->
+              <p>Temp: 74.01 F</p>
+              <p>Wind: 6.67 MPH</p>
+              <p>Humidity: 46 %</p>
+              <p>UV Index: 0.47</p>
+              <!--Background color on number on UV Index span?-->
+            </div>
+
+            <div>
+              <h4>5-Day Forecast:</h4>
+              <div class="row">
+                <div
+                  class="col card text-white bg-info mr-2"
+                  style="width: 18rem"
+                >
+                  <div class="card-body">
+                    <h5 class="card-title">3/31/2021</h5>
+                    <!--img from api so its url with my key-->
+                    <img class="card-img" src="..." alt="Card image cap" />
+                    <p class="card-text">temp: 73.72 F</p>
+                    <p class="card-text">temp: 73.72 F</p>
+                    <p class="card-text">temp: 73.72 F</p>
+                  </div>
+                </div>
+
+                <div
+                  class="col card text-white bg-info mr-2"
+                  style="width: 18rem"
+                >
+                  <div class="card-body">
+                    <h5 class="card-title">3/31/2021</h5>
+                    <!--img from api so its url with my key-->
+                    <img class="card-img" src="..." alt="Card image cap" />
+                    <p class="card-text">temp: 73.72 F</p>
+                    <p class="card-text">temp: 73.72 F</p>
+                    <p class="card-text">temp: 73.72 F</p>
+                  </div>
+                </div>
+
+                <div
+                  class="col card text-white bg-info mr-2"
+                  style="width: 18rem"
+                >
+                  <div class="card-body">
+                    <h5 class="card-title">3/31/2021</h5>
+                    <!--img from api so its url with my key-->
+                    <img class="card-img" src="..." alt="Card image cap" />
+                    <p class="card-text">temp: 73.72 F</p>
+                    <p class="card-text">temp: 73.72 F</p>
+                    <p class="card-text">temp: 73.72 F</p>
+                  </div>
+                </div>
+
+                <div
+                  class="col card text-white bg-info mr-2"
+                  style="width: 18rem"
+                >
+                  <div class="card-body">
+                    <h5 class="card-title">3/31/2021</h5>
+                    <!--img from api so its url with my key-->
+                    <img class="card-img" src="..." alt="Card image cap" />
+                    <p class="card-text">temp: 73.72 F</p>
+                    <p class="card-text">temp: 73.72 F</p>
+                    <p class="card-text">temp: 73.72 F</p>
+                  </div>
+                </div>
+
+                <div
+                  class="col card text-white bg-info mr-2"
+                  style="width: 18rem"
+                >
+                  <div class="card-body">
+                    <h5 class="card-title">3/31/2021</h5>
+                    <!--img from api so its url with my key-->
+                    <img class="card-img" src="..." alt="Card image cap" />
+                    <p class="card-text">temp: 73.72 F</p>
+                    <p class="card-text">temp: 73.72 F</p>
+                    <p class="card-text">temp: 73.72 F</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./assests/js/script.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
