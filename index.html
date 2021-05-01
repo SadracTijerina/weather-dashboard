@@ -66,18 +66,19 @@
           <div class="col-9">
             <!--Current Date-->
             <div class="border border-dark current-date mt-2">
-              <h3>Atlanta (3/30/2021)</h3>
+              <h3 id="city-date" class="col"></h3>
+              <img id="current-icon" src="" alt="" class="col" />
               <!-- Image after date-->
-              <p>Temp: 74.01 F</p>
-              <p>Wind: 6.67 MPH</p>
-              <p>Humidity: 46 %</p>
-              <p>UV Index: 0.47</p>
+              <p id="current-temp"></p>
+              <p id="current-wind"></p>
+              <p id="current-humid"></p>
+              <p id="current-uv"></p>
               <!--Background color on number on UV Index span?-->
             </div>
 
             <div>
               <h4>5-Day Forecast:</h4>
-              <div class="row">
+              <div id="five-day-forecast" class="row">
                 <div
                   class="col card text-white bg-info mr-2"
                   style="width: 18rem"
@@ -87,8 +88,8 @@
                     <!--img from api so its url with my key-->
                     <img class="card-img" src="..." alt="Card image cap" />
                     <p class="card-text">temp: 73.72 F</p>
-                    <p class="card-text">temp: 73.72 F</p>
-                    <p class="card-text">temp: 73.72 F</p>
+                    <p class="card-text">wind: 73.72 F</p>
+                    <p class="card-text">humidity: 73.72 F</p>
                   </div>
                 </div>
 
@@ -101,8 +102,8 @@
                     <!--img from api so its url with my key-->
                     <img class="card-img" src="..." alt="Card image cap" />
                     <p class="card-text">temp: 73.72 F</p>
-                    <p class="card-text">temp: 73.72 F</p>
-                    <p class="card-text">temp: 73.72 F</p>
+                    <p class="card-text">wind: 73.72 F</p>
+                    <p class="card-text">humidity: 73.72 F</p>
                   </div>
                 </div>
 
@@ -115,8 +116,8 @@
                     <!--img from api so its url with my key-->
                     <img class="card-img" src="..." alt="Card image cap" />
                     <p class="card-text">temp: 73.72 F</p>
-                    <p class="card-text">temp: 73.72 F</p>
-                    <p class="card-text">temp: 73.72 F</p>
+                    <p class="card-text">wind: 73.72 F</p>
+                    <p class="card-text">humidity: 73.72 F</p>
                   </div>
                 </div>
 
@@ -129,8 +130,8 @@
                     <!--img from api so its url with my key-->
                     <img class="card-img" src="..." alt="Card image cap" />
                     <p class="card-text">temp: 73.72 F</p>
-                    <p class="card-text">temp: 73.72 F</p>
-                    <p class="card-text">temp: 73.72 F</p>
+                    <p class="card-text">wind: 73.72 F</p>
+                    <p class="card-text">humidity: 73.72 F</p>
                   </div>
                 </div>
 
@@ -143,8 +144,8 @@
                     <!--img from api so its url with my key-->
                     <img class="card-img" src="..." alt="Card image cap" />
                     <p class="card-text">temp: 73.72 F</p>
-                    <p class="card-text">temp: 73.72 F</p>
-                    <p class="card-text">temp: 73.72 F</p>
+                    <p class="card-text">wind: 73.72 F</p>
+                    <p class="card-text">humidity: 73.72 F</p>
                   </div>
                 </div>
               </div>
@@ -155,12 +156,15 @@
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./assests/js/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"
     ></script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -171,5 +175,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./assests/js/script.js"></script>
   </body>
 </html>
