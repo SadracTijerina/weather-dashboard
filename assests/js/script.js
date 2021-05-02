@@ -18,7 +18,7 @@ function currentDateWeather(city) {
         let iconCode = apiObj.weather[0].icon;
         $("#current-icon").attr(
           "src",
-          "http://openweathermap.org/img/w/" + iconCode + ".png"
+          "https://openweathermap.org/img/w/" + iconCode + ".png"
         );
 
         let lon = apiObj.coord.lon;
@@ -71,7 +71,7 @@ function currentDateWeather(city) {
 //This function is used to work on the five day forecast both front and back end
 function fiveDayForecast(city) {
   let apiURL =
-    "http://api.openweathermap.org/data/2.5/forecast?q=" +
+    "https://api.openweathermap.org/data/2.5/forecast?q=" +
     city +
     "&units=imperial&appid=" +
     APIKEY;
@@ -88,7 +88,7 @@ function fiveDayForecast(city) {
 
           let cardImg = $(
             "<img class='card-img' src=" +
-              "http://openweathermap.org/img/w/" +
+              "https://openweathermap.org/img/w/" +
               data.list[i].weather[0].icon +
               ".png />"
           );
