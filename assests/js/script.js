@@ -1,7 +1,7 @@
 var todayDate = moment().format("(MM/DD/YYYY)");
 var APIKEY = "88ab5694ae8be95b14ad32b45072a328";
-//"http://openweathermap.org/img/w/" + iconcode + ".png"; for icon
 
+//This section is used to work on the current weather with both front and back end
 function currentDateWeather(city) {
   $("#city-date").html("<h3>" + city + " " + todayDate + "</h3>");
   let apiURL =
@@ -68,6 +68,7 @@ function currentDateWeather(city) {
   });
 }
 
+//This function is used to work on the five day forecast both front and back end
 function fiveDayForecast(city) {
   let apiURL =
     "http://api.openweathermap.org/data/2.5/forecast?q=" +
@@ -81,7 +82,6 @@ function fiveDayForecast(city) {
         $("#five-day-forecast").empty();
 
         for (let i = 0; i <= 40; i += 8) {
-          //TODO: Here is where I create and append cards to five-day-forecast
           let cardTitle = $(
             "<h5 class='card-title'>" + data.list[i].dt_txt + "</h5>"
           );
@@ -129,6 +129,23 @@ function fiveDayForecast(city) {
     }
   });
 }
+
+//This is used to display user history
+function userHistory(city) {
+  let btn = $(
+    "<button type'button' class='btn btn-secondary btn-lg btn-block search-history'>" +
+      city +
+      "</button>"
+  );
+
+  if ($("#history").children().length > 5) {
+    $("#history").find(":first-child").remove();
+    btn.appendTo("#history");
+  } else {
+    btn.appendTo("#history");
+  }
+}
+
 $("#searchBtn").click(function () {
   let userInput = $("#userCity").val();
 
@@ -136,5 +153,11 @@ $("#searchBtn").click(function () {
 
   fiveDayForecast(userInput);
 
-  //For 5 weather forcast go through "list" array every 8 times to get the data for next day
+  userHistory(userInput);
+});
+
+//Not sure why this function didnt work
+$(".search-history").click(function () {
+  console.log("we here");
+  console.dir(this);
 });
