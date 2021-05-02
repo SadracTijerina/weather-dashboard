@@ -15,3 +15,7 @@ h4 {
 #current-icon {
   max-width: 5%;
 }
+
+.card-img {
+  max-width: 30%;
+}
